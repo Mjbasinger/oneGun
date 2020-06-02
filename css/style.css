@@ -1,0 +1,40 @@
+@media only screen and (max-width: 600px) {
+
+#wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20%;
+}
+
+body {
+    background-color: rgb(240, 240, 240);
+    text-align: center;
+}
+
+h1{
+    font-family: Spectral;
+}
+
+button {
+    font-family: Spectral;
+    font-size: 20pt;
+    margin: 5%;
+    margin-bottom: 10%;
+    padding: 3%;
+}
+
+p {
+    font-size: 20pt;
+    font-family: Spectral;
+}
+
+img {
+    max-width: 80vw;
+}
+
+#gunDescription {
+    font-size: 15pt;
+}
+
+}
