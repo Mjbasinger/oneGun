@@ -1,36 +1,86 @@
+
+
 @media only screen and (max-width: 600px) {
 
 #wrapper{
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-top: 20%;
+    padding-top: 1%;
+    max-height: 100vw;
+   
 }
 
 body {
     background-color: rgb(240, 240, 240);
     text-align: center;
+    justify-content: space-between;
 }
 
 h1{
-    font-family: Spectral;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin-top: 0;
 }
 
 button {
-    font-family: Spectral;
-    font-size: 20pt;
-    margin: 5%;
+    /* font-family: Spectral; */
+    font-size: 15pt;
+    /* margin-top: 5%; */
+    margin-bottom: 10px;
+    /* padding: 10%; */
+}
+
+#gunOne{
+    padding: 1%;
+    max-height: 200px;
+    min-height: 100px;
+    max-width: 200px;
+    min-width: 200px;
     margin-bottom: 10%;
-    padding: 3%;
+    overflow: hidden;
+}
+
+#gunTwo{
+    
+    /* margin: 2%; */
+    padding: 1%;
+    max-height: 200px;
+    min-height: 100px;
+    max-width: 200px;
+    min-width: 200px;
+    
+}
+
+.addBorder{
+    border: 1px solid black;
+    box-shadow: 2px 2px 10px grey;
+}
+
+#legendButton {
+    font-size: 15pt;
 }
 
 p {
-    font-size: 20pt;
-    font-family: Spectral;
+    font-size: 15pt;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin: 10%;
+
+}
+
+#yourLegend{
+    padding: 1%;
+    font-size: 15pt;
+   
 }
 
 img {
-    max-width: 80vw;
+    max-width: 60%;
+    max-height: 60%;
+    
+}
+
+#legendImage {
+    max-height: 200px;
 }
 
 #gunDescription {

@@ -8,18 +8,39 @@
     <link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@1,600&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Bilbo&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="app.js"></script>
 
 </head>
 <body>
     <div id="wrapper">
-        <h1>One Gun To Rule Them All</h1>
-        <button id="button" onclick="randomGun()">Let fate decide</button>
+        <h1>Apex Legends Randomizer</h1>
         <div>
-            <p id="yourGun"></p>
-            <img id="gunImage" src="" />
-            <p id="gunDescription"></p>
+            <button id='random'>Randomize</button>
+            <br>
+            <!-- <button id="button" onclick="randomGun()">What are your guns?</button>
+            <button id="legendButton" onclick="randomLegend()">Who is your Legend?</button> -->
+            </div>
+        <div>
+            <p id="gunIs"></p>
+            <div id="gunsAre">
+            <div id="gunOne">
+                <p id="yourGun"></p>
+                <img id="gunImage" src="" />
+                <p id="gunDescription"></p>
+             </div>  
+             <div id="gunTwo">
+                <p id="gunIsTwo"></p>
+                <p id="gunIsTwo"></p>
+                <p id="yourGunTwo"></p>
+                <img id="gunImage2" src="" />
+                <p id="gunDescription2"></p>
+            </div>
+        </div>
+
+            <p id="yourLegend"></p>
+            <img id="legendImage" src=""/>
+            <p id="legendDescription"></p>
         </div>
     </div>
 </body>

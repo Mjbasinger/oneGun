@@ -1,5 +1,8 @@
 
-buttonDiv = document.getElementById('yourGun');
+const $randomButton = document.getElementById('#random');
+const $gunOne = document.getElementById('gunOne');
+const $gunTwo = document.getElementById('gunTwo');
+const $yourLegend = document.getElementById('yourLegend');
 
 //images for guns
 let flatlineImage = 'images/Flatline_Icon.png'
@@ -23,8 +26,31 @@ let reFourFiveImage = 'images/reFourFive.png'
 let pTwentyTwentyImage = 'images/pTwentyTwenty.png'
 let wingmanImage = 'images/wingman.png'
 
+//images for legends
+let bangaloreImage = 'images/bangalore.jpg'
+let wraithImage = 'images/wraith.jpg'
+let mirageImage = 'images/mirage.jpg'
+let octaneImage = 'images/octane.jpg'
+let revenantImage = 'images/revenant.jpg'
+let gibralterImage = 'images/gibralter.jpg'
+let causticImage = 'images/caustic.jpg'
+let wattsonImage = 'images/wattson.jpg'
+let lifelineImage = 'images/lifeline.jpg'
+let lobaImage = 'images/loba.jpg'
+let bloodhoundImage = 'images/bloodhound.jpg'
+let pathfinderImage = 'images/pathfinder.jpg'
+let cryptoImage = 'images/crypto.jpg'
+
 //class contructor for guns
 class Gun{
+    constructor(name, image, description) {
+        this.name = name; 
+        this.image = image;
+        this.description = description;
+}
+}
+///constructor for legends
+class Legend{
     constructor(name, image, description) {
         this.name = name; 
         this.image = image;
@@ -52,23 +78,70 @@ let mozambique = new Gun('Mozambique Shotgun', mozambiqueImage, 'Triple-barrel s
 let reFourFive = new Gun('RE-45 Auto', reFourFiveImage, 'Full-auto pistol');
 let pTwentyTwenty = new Gun('P2020', pTwentyTwentyImage, 'semi-auto pistol');
 let wingman = new Gun('Wingman', wingmanImage, 'High-powered revolver');
+//gun array
+let gunArr = [flatline, scout, hemlock, rThreeOhOne, havoc, alternator, prowler, rNineNine, spitfire, lStar, longbow, tripleTake, sentinel, chargeRifle, evaEight, mastiff, mozambique, reFourFive, pTwentyTwenty, wingman];
 
-gunArr = [flatline, scout, hemlock, rThreeOhOne, havoc, alternator, prowler, rNineNine, spitfire, lStar, longbow, tripleTake, sentinel, chargeRifle, evaEight, mastiff, mozambique, reFourFive, pTwentyTwenty, wingman];
+//unique legends
+let bangalore = new Legend('Bangalore', bangaloreImage, 'Professional Soldier')
+let wraith = new Legend('Wraith', wraithImage, 'Interdimensional Skirmisher')
+let mirage = new Legend('Mirage', mirageImage, 'Holographic Trickster')
+let octane = new Legend('Octane', octaneImage, 'High-Speed Daredevil')
+let revenant = new Legend('Revenant', revenantImage, 'Synthetic Nightmare')
+let gibralter = new Legend('Gibralter', gibralterImage, 'Shielded Fortress')
+let caustic = new Legend('Caustic', causticImage, 'Toxic Trapper')
+let wattson = new Legend('Wattson', wattsonImage, 'Static Defender')
+let lifeline = new Legend('Lifeline', lifelineImage, 'Combat Medic')
+let loba = new Legend('Loba', lobaImage, 'Translocating Thief')
+let bloodhound = new Legend('Bloodhound', bloodhoundImage, 'Technological Tracker')
+let pathfinder = new Legend('Pathfinder', pathfinderImage, 'Forward Scout')
+let crypto = new Legend('Crypto', cryptoImage, 'Surveillance Expert')
 
-// gunsArray = ['flatline', 'g7 scout', 'hemlock'];
+//legends array
+
+let legendsArray = [bangalore, wraith, mirage, octane, revenant, gibralter, caustic, wattson, lifeline, loba, bloodhound, pathfinder, crypto];
+
 //random math
 
-
+$(()=>{
 //function tied to onClick to return random gun
 function randomGun() {
         gun = gunArr[Math.floor(Math.random() * gunArr.length)];
         image = gunArr[Math.floor(Math.random() * gunArr.length)];
-        
-        console.log(gun)
-        // console.log(gunArr)
-        yourGun.innerHTML = `Your gun is the ${gun.name}`;
+
+        gun2 = gunArr[Math.floor(Math.random() * gunArr.length)];
+        image2 = gunArr[Math.floor(Math.random() * gunArr.length)];
+
+        gunIs.innerHTML = 'Your guns: ';
+        yourGun.innerHTML = `${gun.name}`;
         document.getElementById("gunImage").src = gun.image;
-        gunDescription.innerHTML = gun.description;
+        // gunDescription.innerHTML = gun.description;
+       
+        yourGunTwo.innerHTML = `${gun2.name}`;
+        document.getElementById("gunImage2").src = gun2.image;
+        // gunDescription2.innerHTML = gun2.description;
     };
 
 
+function randomLegend(){
+        legend = legendsArray[Math.floor(Math.random()*legendsArray.length)];
+        image = legendsArray[Math.floor(Math.random()*legendsArray.length)];
+
+        yourLegend.innerHTML = `Your legend: ${legend.name}`;
+        document.getElementById('legendImage').src = legend.image;
+        legendDescription.innerHTML = legend.description;
+        
+        
+}
+
+
+    $("button").click( function randomizeAll(){
+    randomGun();
+    randomLegend();
+    $("#gunOne").addClass('addBorder');
+    $("#gunTwo").addClass('addBorder');
+    // $("#yourLegend").addClass('addBorder');
+    $("#legendImage").addClass('addBorder')
+    
+})
+
+})
