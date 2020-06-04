@@ -102,7 +102,7 @@ let legendsArray = [bangalore, wraith, mirage, octane, revenant, gibralter, caus
 
 //random math
 
-$(()=>{
+$(()=>{ 
 //function tied to onClick to return random gun
 function randomGun() {
         gun = gunArr[Math.floor(Math.random() * gunArr.length)];
